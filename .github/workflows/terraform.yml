@@ -30,15 +30,23 @@ jobs:
           region: ${{ env.AWS_REGION }}
 
       - name: Terraform Init
-        run: terraform init
+        run: |
+           cd vpc
+           terraform init
 
       - name: Terraform Validate
-        run: terraform validate
+        run: |
+          cd vpc
+          terraform validate
 
       - name: Terraform Plan
-        run: terraform plan
+        run: |
+          cd vpc
+          terraform plan
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
-        run: terraform apply -auto-approve
+        run: |
+          cd vpc
+          terraform apply -auto-approve
 
