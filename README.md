@@ -26,10 +26,8 @@
 
 # Follow respective README.md files for running agent & mcp_server 
 
-
 # Note: 
 Code was developed and tested on Mac, Apple M1. So there might be some adjustments needed considering the OS you are running. Rest everything should work.
-
 
 # Input 
 🧠 Enter your K8s command (natural language): show me all the running pods from default cluster
